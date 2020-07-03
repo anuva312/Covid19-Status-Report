@@ -22,6 +22,11 @@ h4 {
     background-color: #830086;
 }
 
+.form-reg input[type="submit"] {
+    float: right;
+    content: "›";
+}
+
 .form-reg h4 {
     display: inline;
 }
@@ -30,7 +35,6 @@ h4 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #F9F9F9;
     color: black;
-    /* max-width: 300px; */
     padding: 20%;
     margin: 20px;
 }
@@ -61,8 +65,16 @@ h4 {
 
 #contact {
     background-color: #830086;
-    width: 100%;
-    padding: 100px 100px;
+    padding: 10px 10px 40px 10px;
+}
+
+#contact h3 {
+    text-align: center;
+}
+
+#contact form {
+    width: min-content;
+    margin: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -85,5 +97,6 @@ h4 {
 
     .form-reg h4 {
         display: block;
+        font-size: 1.5em;
     }
   }
