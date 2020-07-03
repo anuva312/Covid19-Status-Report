@@ -22,9 +22,15 @@ h4 {
     background-color: #830086;
 }
 
-.form-reg input[type="submit"] {
+.form-reg input[type="text"]{
+    border: 0;
+}
+
+.form-reg button {
     float: right;
-    content: "›";
+    background-color: #530055;
+    color: #F9F9F9;
+    border: 0;
 }
 
 .form-reg h4 {
@@ -75,6 +81,21 @@ h4 {
 #contact form {
     width: min-content;
     margin: auto;
+    line-height: 30px;
+}
+
+#contact form input, textarea {
+    width: 300px;
+}
+
+#contact form textarea {
+    resize: none;
+    height: 150px;
+    padding: 4px;
+}
+
+#contact form input[type="submit"] {
+    width: min-content;
 }
 
 @media screen and (max-width: 600px) {
