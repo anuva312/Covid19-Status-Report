@@ -1,54 +1,56 @@
-<html>
-<head>
-<title>COVID-19 STATUS REPORT </title>
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+	<title>COVID-19 STATUS REPORT </title>
 </head>
+
 <body>
-
-<div class="header">
-	<h1>Covid19 Status Report </h1>
-</div>
-
-<div class="form_reg">
-	<form>
-		<h4>Your Region : <input type="text" name="region"><input type="submit"></h4>
-	</form>
-</div>
-
-<div>
-	<h2>Current Status</h2>
-	<hr>
-		<div class="global" >
+	<div class="header">
+		<h4>Covid19 Status Report </h4>
+	</div>
+	<div class="form-reg">
+		<form>
+			<h4>Your Region :</h4>
+			<input type="text" name="region">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+	<div id="data">
+		<h2>Current Status</h2>
+		<hr>
+		<div class="card">
 			<h3>Global</h3>
 			<p>Confirmed:</p>
 			<p>Recovered:</p>
 			<p>Deaths:</p>
-		</div class="country" >
-		<div>
+		</div>
+		<div class="card">
 			<h3>Country</h3>
 			<p>Confirmed:</p>
 			<p>Recovered:</p>
 			<p>Deaths:</p>
 		</div>
-		<div class="state">
+		<div class="card">
 			<h3>State</h3>
 			<p>Confirmed:</p>
 			<p>Recovered:</p>
 			<p>Deaths:</p>
 		</div>
-
-</div>
-
-<div class="footer">
-
-	<h3>Contact For Suggestion</h3>
-	<form>
-		Name : <input type="text" name="name"><br>
-		Email : <input type="email" name="email"><br>
-		Message : <textarea name="message"></textarea><br><br>
-		<input type="submit">
-	</form>
-
-</div>
-
+	</div>
+	<div id="contact">
+		<h3>Suggestions</h3>
+		<form>
+			Name :<br>
+			<input type="text" name="name"><br>
+			Email :<br>
+			<input type="email" name="email"><br>
+			Message :<br>
+			<textarea name="message"></textarea><br><br>
+			<input type="submit" value="Send">
+		</form>
+	</div>
 </body>
 </html>
