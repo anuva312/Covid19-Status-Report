@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<title>COVID-19 STATUS REPORT </title>
 </head>
 
 <body>
-	<div class="header">
-		<h4>Covid19 Status Report </h4>
-	</div>
-	<div class="form-reg">
-		<form>
-			<h4>Your Region :</h4>
-			<input type="text" name="region">
-			<button type="submit"><i class="fa fa-angle-right"></i></button>
-		</form>
-	</div>
-	<div id="data">
-		<h2>Current Status</h2>
-		<hr>
+	<div id="grid-container">
+		<div class="header">
+			<h4>Covid19 Status Report </h4>
+		</div>
+		<div class="form-reg">
+			<form>
+				<h4>Your Region :</h4>
+				<input type="text" name="region">
+				<button type="submit"><i class="fa fa-angle-right"></i></button>
+			</form>
+		</div>
+		<div id="title">
+			<h2>Current Status</h2>
+			<hr>
+		</div>
 		<div class="card">
 			<h3>State</h3>
 			<p>Confirmed:</p>
@@ -40,18 +44,19 @@
 			<p>Recovered:</p>
 			<p>Deaths:</p>
 		</div>
-	</div>
-	<div id="contact">
-		<h3>Suggestions</h3>
-		<form>
-			Name :<br>
-			<input type="text" name="name"><br>
-			Email :<br>
-			<input type="email" name="email"><br>
-			Message :<br>
-			<textarea name="message"></textarea><br><br>
-			<input type="submit" value="Send">
-		</form>
+		<div id="contact">
+			<h3>Suggestions</h3>
+			<form>
+				Name :<br>
+				<input type="text" name="name"><br>
+				Email :<br>
+				<input type="email" name="email"><br>
+				Message :<br>
+				<textarea name="message"></textarea><br><br>
+				<input type="submit" value="Send">
+			</form>
+		</div>
 	</div>
 </body>
+
 </html>
