@@ -1,14 +1,17 @@
 // Event handling
-document.addEventListener("DOMContentLoaded",
+(function (global){
+  document.addEventListener("DOMContentLoaded",
   function (event) {
     var summary;
+    var country_list=[];
     //To get data pertaining to a specific country 
     function getCountryData(country_name){
       var country_data = summary["Countries"]
               // console.log(country_name)
       country_data.forEach(function (each_country){
+        country_list.push(each_country.Country);
         if (each_country.Country === country_name){
-          console.log(each_country)
+          console.log(each_country);
           document.querySelector("#country_field_head")
             .innerHTML = ("Country: " +country_name);
           document.querySelector("#country_confirmed")
@@ -40,9 +43,10 @@ document.addEventListener("DOMContentLoaded",
         getCountryData(country_name);     
       });
     });
-})
-           
-
+    global.summary=summary;
+    global.country_list=country_list;
+  });
+})(window);
 
 
 
