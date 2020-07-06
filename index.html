@@ -12,43 +12,47 @@
 <body>
 	<div id="top-nav">
 		<h4>Covid19 Status Report </h4>
-		<hr>
 		<nav>
-			<a href="#">Home</a>
-			<a href="#">Symptoms</a>
-			<a href="#">Prevention</a>
+			<a href="index.html">Home</a>
+			<a href="symptoms.html">Symptoms</a>
+			<a href="prevention.html">Prevention</a>
 		</nav>
 	</div>
-	<!-- <div id="grid-container"> -->
-		<div id="search-banner">
-			<img src="img/world-map.png">
-			<form>
-				<h4>Your Region :</h4>
-				<input type="text" name="region">
-				<button type="submit"><i class="fa fa-angle-right"></i></button>
-			</form>
-		</div>
+
+	<div id="search-banner">
+		<img src="img/world-map.png">
+		<h4>Your Region :</h4>
+		<form>
+			<input type="text" name="region">
+			<button type="submit"><i class="fa fa-angle-right"></i></button>
+		</form>
+	</div>
+	<div id="main-container">
 		<aside>
-			<button>All Countries</button>
-			<button>Daily Changes</button>
+			<a href="all_countries.html">All Countries</a>
+			<a href="daily_changes.html">Daily Changes</a>
 		</aside>
-		<div id="title">
-			<h2>Current Status</h2>
-			<!-- <hr> -->
+		<hr>
+		<div id="right">
+			<div id="title">
+				<h2>Current Status</h2>
+			</div>
+			<div id="cards">
+				<div class="card-odd">
+					<h3>Country</h3>
+					<p>Confirmed:</p>
+					<p>Recovered:</p>
+					<p>Deaths:</p>
+				</div>
+				<div class="card-even">
+					<h3>Global</h3>
+					<p>Confirmed:</p>
+					<p>Recovered:</p>
+					<p>Deaths:</p>
+				</div>
+			</div>
 		</div>
-		<div class="card-odd">
-			<h3>Country</h3>
-			<p>Confirmed:</p>
-			<p>Recovered:</p>
-			<p>Deaths:</p>
-		</div>
-		<div class="card-even">
-			<h3>Global</h3>
-			<p>Confirmed:</p>
-			<p>Recovered:</p>
-			<p>Deaths:</p>
-		</div>
-	<!-- </div> -->
+	</div>
 	<footer>
 		Designed by Remarkable Pebbles. <br>
 		For feedback, <a href="contact.html">Click Here</a>
