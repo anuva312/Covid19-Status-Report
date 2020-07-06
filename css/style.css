@@ -1,0 +1,103 @@
+@font-face{
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #f9f9f9;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+}
+
+/* Top Navigation */
+
+#top-nav *{
+    display: inline;
+    color: #f9f9f9;
+}
+
+#top-nav{
+    background-color: #830086;
+    padding: 2.5vh 6vw;
+    margin: auto;
+}
+
+#top-nav nav {
+    float: right;
+    text-decoration: none;
+}
+
+#top-nav nav a{
+    text-decoration: none;
+    padding-right: 3vw;
+}
+
+/* Search Banner */
+
+#search-banner{
+    /* background-color: red; */
+    color: #830086;
+    display: flow-root;
+}
+
+#search-banner img{
+    width: 50%;
+    float: left;
+}
+
+
+/* Grid */
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,300px));
+}
+
+
+.card-odd {
+    border: 12px solid #830086;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.card-even {
+    border: 12px solid #830086;
+    border-radius: 30px;
+    background-color: #830086;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1vh 0;
+    background-color: #830086;
+    color: #f9f9f9;
+    text-align: center;
+    font-size: .9em;
+}
+
+footer a {
+    color: #f9f9f9;
+}
+
+@media screen and (max-width: 600px){
+    #top-nav {
+        text-align: center;
+    }
+
+    #top-nav nav{
+        background-color: #830086;
+        float: none; 
+        display: block;
+        margin-top: 1.5vh;
+    }
+}
