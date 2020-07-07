@@ -165,10 +165,18 @@ hr{
     margin: auto;
 }
 
-#main-container aside a{
-    max-width: 150px;
+/* Common Aside Code */
+
+#main-container aside a {
     margin: 30px auto;
     display: block;
+}
+
+#main-container aside a,
+#daily-changes aside button 
+{
+    background-color: #f9f9f9;
+    max-width: 150px;
     text-decoration: none;
     color: #830086;
     border: 1px solid #830086;
@@ -176,7 +184,8 @@ hr{
     padding: 10px 15px;
 }
 
-#main-container aside a:hover{
+#main-container aside a:hover,
+#daily-changes aside button:hover{
     color: #f9f9f9;
     background-color: #830086;
 }
@@ -221,6 +230,21 @@ hr{
     background-color: #830086;
     color: #f9f9f9;  
 }
+
+/* Daily Changes */
+
+#daily-changes{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#daily-changes aside{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
 
 /* Suggestion Form */
 
