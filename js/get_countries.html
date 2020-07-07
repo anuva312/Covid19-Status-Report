@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getting Country Names</title>
+	<script type="text/javascript" src="ajaxutils.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$ajaxUtils.sendGetRequest("https://api.covid19api.com/countries", 
+    function (request) {
+    	var countries = JSON.parse(request.responseText);
+    	var country_list = [];
+    	countries.forEach(function (each_country){
+    		country_list.push(each_country["Country"]);
+    	});
+    	console.log(country_list);
+    })
+	</script>
+</body>
+</html>
