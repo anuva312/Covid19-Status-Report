@@ -21,43 +21,46 @@
 			<a href="prevention.html">Prevention</a>
 		</nav>
 	</div>
-
-	<div id="search-banner">
-		<img src="img/world-map.png">
-		<h4>Your Region :</h4>
-		<form onsubmit="return false;">
-			<input type="text" name="region" id="country_field">
-			<button type="submit"><i class="fa fa-angle-right"></i></button>
-		</form>
-	</div>
-	<div id="main-container">
-		<aside>
-			<a href="all_countries.html">All Countries</a>
-			<a href="daily_changes.html">Daily Changes</a>
-		</aside>
-		<hr>
-		<div id="right">
-			<div id="title">
-				<h2>Current Status</h2>
+	<div id="page-container">
+		<div id="search-banner">
+			<img src="img/world-map.png">
+			<div id="text">
+				<h4>Your Region :</h4>
+				<form onsubmit="return false;">
+					<input type="text" name="region" id="country_field">
+					<button type="submit"><i class="fa fa-angle-right"></i></button>
+				</form>
 			</div>
-			<div id="cards">
-				<div class="card-odd">
-					<h3 id="country_field_head">Country</h3>
-					<p id="country_confirmed">Total Confirmed:</p>
-					<p id="country_recovered">Total Recovered:</p>
-					<p id="country_deaths">Total Deaths:</p>
-					<p id="country_new_confirmed">Today's Confirmed:</p>
-					<p id="country_new_recovered">Today's Recovered:</p>
-					<p id="country_new_deaths">TOday's Deaths:</p>
+		</div>
+		<div id="main-container">
+			<aside>
+				<a href="all_countries.html">All Countries</a>
+				<a href="daily_changes.html">Daily Changes</a>
+			</aside>
+			<hr>
+			<div id="right">
+				<div id="title">
+					<h2>Current Status</h2>
 				</div>
-				<div class="card-even">
-					<h3>Global</h3>
-					<p id="global_confirmed">Confirmed:</p>
-					<p id="global_recovered">Recovered:</p>
-					<p id="global_deaths">Deaths:</p>
-					<p id="global_new_confirmed">Today's Confirmed:</p>
-					<p id="global_new_recovered">Today's Recovered:</p>
-					<p id="global_new_deaths">TOday's Deaths:</p>
+				<div id="cards">
+					<div class="card-odd">
+						<h3 id="country_field_head">Country</h3>
+						<p id="country_confirmed">Total Confirmed:</p>
+						<p id="country_recovered">Total Recovered:</p>
+						<p id="country_deaths">Total Deaths:</p>
+						<p id="country_new_confirmed">Today's Confirmed:</p>
+						<p id="country_new_recovered">Today's Recovered:</p>
+						<p id="country_new_deaths">TOday's Deaths:</p>
+					</div>
+					<div class="card-even">
+						<h3>Global</h3>
+						<p id="global_confirmed">Confirmed:</p>
+						<p id="global_recovered">Recovered:</p>
+						<p id="global_deaths">Deaths:</p>
+						<p id="global_new_confirmed">Today's Confirmed:</p>
+						<p id="global_new_recovered">Today's Recovered:</p>
+						<p id="global_new_deaths">TOday's Deaths:</p>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,12 @@
 @font-face{
     font-family: Montserrat;
-    src: url(fonts/Montserrat-Regular.ttf);
+    src: url(fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-weight: bold;
 }
 
 * {
@@ -12,11 +18,31 @@ body {
     margin: 0;
 }
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 8vh;
+}
+
+#title{
+    color: #830086;
+    text-align: center;
+    
+}
+
+hr{
+    color: #830086;
+    width: 40%;
+}
+
 /* Top Navigation */
 
 #top-nav *{
-    display: inline;
     color: #f9f9f9;
+}
+
+#top-nav h4{
+    display: inline;
 }
 
 #top-nav{
@@ -32,54 +58,234 @@ body {
 
 #top-nav nav a{
     text-decoration: none;
-    padding-right: 3vw;
+    padding: 1vh 1.5vw;
+}
+
+#top-nav nav a:hover{
+    background-color: #f9f9f9;
+    color: #830086;
+    border-radius: 20px;
 }
 
 /* Search Banner */
 
 #search-banner{
-    /* background-color: red; */
     color: #830086;
-    display: flow-root;
+    display: flex;
+    max-height: 35vh;
+    max-width: 80vw;
+    margin: auto;
 }
+
 
 #search-banner img{
-    width: 50%;
-    float: left;
+    padding: 2vh;
+    object-fit: contain;
+    max-width: 50%;
 }
 
-
-/* Grid */
-
-#grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,300px));
+#search-banner #text{
+    flex-grow: 1;
+    text-align: left;
+    align-self: center;
 }
 
+#search-banner #text h4{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-.card-odd {
-    border: 12px solid #830086;
-    border-radius: 30px;
+#search-banner #text form {
+    display: flex;
+    justify-content: left;
+}
+
+#search-banner #text form input{
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #830086;
+    padding: 0 15px;
+    
+}
+
+#search-banner #text form input:focus{
+    border: 2px solid #4e71b3;  
+}
+
+#search-banner form button{
+    border-radius: 0 20px 20px 0;
+    background-color: #830086;
+    border: 1px solid #830086;
+    color: #f9f9f9;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Auto Complete */
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+  }
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+/* Main */
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    margin: auto;
+}
+
+/* Common Aside Code */
+
+#main-container aside a {
+    margin: 30px auto;
+    display: block;
+}
+
+#main-container aside a,
+#daily-changes aside button 
+{
+    background-color: #f9f9f9;
+    max-width: 150px;
+    text-decoration: none;
+    color: #830086;
+    border: 1px solid #830086;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+#main-container aside a:hover,
+#daily-changes aside button:hover{
+    color: #f9f9f9;
+    background-color: #830086;
+}
+
+#main-container aside{
+    flex-grow: 2;
+    margin: auto 20px;
+}
+
+#main-container hr{
+    margin:10px 10vw 15px  0;
+    width: initial;
+    border: 2px solid #830086;
+    justify-self: center;
+}
+
+#main-container #right{
+    flex-grow: 3;
     text-align: center;
+    color: #830086;
+}
+
+#main-container #right #cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.card-odd, .card-even{
+    flex-grow: 1;
+    min-width: 150px;
+    margin: 3vw;
+    padding-left: 2vw;
+    padding-bottom: 6vh;
+    border: 6px solid #830086;
+    border-radius: 30px;
+    text-align: left;
 }
 
 .card-even {
-    border: 12px solid #830086;
-    border-radius: 30px;
+    background-color: #830086;
+    color: #f9f9f9;  
+}
+
+/* Daily Changes */
+
+#daily-changes{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#daily-changes aside{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+
+/* Suggestion Form */
+
+#suggestion-form form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+}
+
+#suggestion-form form *{
+    padding: 10px;
+}
+
+#suggestion-form form :last-child{
+    padding: 10px 20px;
+    width: max-content;
+    margin: 15px auto;
+    border: 1px solid #830086;
+    border-radius: 20px;
     background-color: #830086;
     color: #f9f9f9;
-    text-align: center;
 }
+
+#suggestion-form form :last-child:hover{
+    background-color: #f9f9f9;
+    color: #830086;
+    cursor: pointer;
+}
+
 
 /* Footer */
 
 footer {
     position: fixed;
-    left: 0;
+    height: 8vh;
+    padding-top: 1vh;
     bottom: 0;
     width: 100%;
-    padding: 1vh 0;
     background-color: #830086;
+    border-top: 1px solid #f9f9f9;
     color: #f9f9f9;
     text-align: center;
     font-size: .9em;
@@ -89,7 +295,34 @@ footer a {
     color: #f9f9f9;
 }
 
+@media screen and (max-width: 900px){
+
+    /* Main */
+
+    #main-container{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #main-container aside{
+        display: flex;
+    }
+
+    #main-container aside a{
+        margin: 20px 5px auto;
+    }
+
+    #main-container hr{
+        margin: 20px 20px 0;
+        border-width: 1px;
+    }
+
+}
+
 @media screen and (max-width: 600px){
+    
+    /* Nav */
+    
     #top-nav {
         text-align: center;
     }
@@ -99,5 +332,26 @@ footer a {
         float: none; 
         display: block;
         margin-top: 1.5vh;
+    }
+
+    /* Search Banner */
+    #search-banner img{
+        display: none;
+    }
+
+    #search-banner #text{
+        margin: 0 auto;
+        background-image: url(../img/world-map.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #830086;
+        text-shadow: -2px -2px 1px #f9f9f9;
+        min-height: 20vh;
+        width: min-content;
+        
+    }
+
+    #search-banner{
+        display: initial;
     }
 }
