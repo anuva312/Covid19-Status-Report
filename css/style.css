@@ -298,6 +298,7 @@ footer a {
 
     #main-container aside{
         display: flex;
+        justify-content: center;
     }
 
     #main-container aside a{
