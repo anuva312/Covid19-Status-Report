@@ -160,7 +160,6 @@ hr{
 
 #main-container {
     display: flex;
-    flex-wrap: wrap;
     max-width: 80vw;
     margin: auto;
 }
@@ -210,7 +209,6 @@ hr{
 
 #main-container #right #cards{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
 }
@@ -315,6 +313,10 @@ footer a {
     #main-container hr{
         margin: 20px 20px 0;
         border-width: 1px;
+    }
+
+    #main-container #right #cards{
+        flex-wrap: wrap;
     }
 
 }
