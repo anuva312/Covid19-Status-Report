@@ -9,9 +9,9 @@
       var country_data = summary["Countries"];
       country_data.forEach(function (each_country){
         if (each_country.Country === country_name){
-          // console.log(each_country);
+          localStorage.setItem("countryName",each_country["Slug"]);
           document.querySelector("#country_field_head")
-            .innerHTML = ("Country: " +country_name);
+            .innerHTML = ("Country<br>" +country_name);
           document.querySelector("#country_confirmed")
             .innerHTML = ("Total Confirmed: " +each_country["TotalConfirmed"]);
           document.querySelector("#country_deaths")
@@ -57,7 +57,7 @@
       document.querySelector("button").addEventListener("click",
       function () {
         var country_name = document.getElementById("country_field").value;
-        localStorage.setItem("countryName",country_name);
+        document.getElementById("country_field").value=null;
         getCountryData(country_name);     
       });
     });
