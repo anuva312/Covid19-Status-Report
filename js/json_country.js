@@ -4,30 +4,31 @@
   function (event) {
     var summary;
     var country_list=[];
-    // var got_list = false;
     //To get data pertaining to a specific country 
     function getCountryData(country_name){
-      var country_data = summary["Countries"]
-              // console.log(country_name)
+      var country_data = summary["Countries"];
       country_data.forEach(function (each_country){
-        // country_list.push(each_country.Country);
         if (each_country.Country === country_name){
-          console.log(each_country);
+          // console.log(each_country);
           document.querySelector("#country_field_head")
             .innerHTML = ("Country: " +country_name);
           document.querySelector("#country_confirmed")
-            .innerHTML = ("Confirmed: " +each_country["TotalConfirmed"]);
+            .innerHTML = ("Total Confirmed: " +each_country["TotalConfirmed"]);
           document.querySelector("#country_deaths")
-            .innerHTML = ("Deaths: " +each_country["TotalDeaths"]);
+            .innerHTML = ("Total Deaths: " +each_country["TotalDeaths"]);
           document.querySelector("#country_recovered")
-            .innerHTML = ("Recovered: " +each_country["TotalRecovered"]);
-          // if(got_list===true){
-          //   break;
-          // }
+            .innerHTML = ("Total Recovered: " +each_country["TotalRecovered"]);
+          document.querySelector("#country_new_confirmed")
+            .innerHTML = ("Today's Confirmed: " +each_country["NewConfirmed"]);
+          document.querySelector("#country_new_deaths")
+            .innerHTML = ("Today's Deaths: " +each_country["NewDeaths"]);
+          document.querySelector("#country_new_recovered")
+            .innerHTML = ("Today's Recovered: " +each_country["NewRecovered"]);
         } 
       })
     };
 
+    //getting country list to display autocomplete
     function getCountryList(){
       summary['Countries'].forEach(function (each_country){
         country_list.push(each_country.Country);
@@ -41,15 +42,22 @@
       getCountryList();
       var global_count = summary["Global"]
       document.querySelector("#global_confirmed")
-        .innerHTML = ("Confirmed: " +global_count["TotalConfirmed"]);
+        .innerHTML = ("Total Confirmed: " +global_count["TotalConfirmed"]);
       document.querySelector("#global_deaths")
-        .innerHTML = ("Deaths: " +global_count["TotalDeaths"]);
+        .innerHTML = ("Total Deaths: " +global_count["TotalDeaths"]);
       document.querySelector("#global_recovered")
-        .innerHTML = ("Recovered: " +global_count["TotalRecovered"]);
+        .innerHTML = ("Total Recovered: " +global_count["TotalRecovered"]);
+      document.querySelector("#global_new_confirmed")
+        .innerHTML = ("Today's Confirmed: " +global_count["NewConfirmed"]);
+      document.querySelector("#global_new_deaths")
+        .innerHTML = ("Today's Deaths: " +global_count["NewDeaths"]);
+      document.querySelector("#global_new_recovered")
+        .innerHTML = ("Today's Recovered: " +global_count["NewRecovered"]);
       getCountryData("United States of America");
       document.querySelector("button").addEventListener("click",
       function () {
         var country_name = document.getElementById("country_field").value;
+        localStorage.setItem("countryName",country_name);
         getCountryData(country_name);     
       });
     });

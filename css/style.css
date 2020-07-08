@@ -1,123 +1,103 @@
+@font-face{
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
 * {
     box-sizing: border-box;
 }
 body {
-    background-color: #900093;
-    color: #F9F9F9;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    font-family: Montserrat, sans-serif;
     margin: 0;
 }
 
-h4 {
-    text-align: center;
-}
+/* Top Navigation */
 
-.form-reg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 250px;
-    height: 50vh;
-    width: 100%;
-    background-color: #830086;
-}
-
-.form-reg input[type="text"]{
-    border: 0;
-}
-
-.form-reg button {
-    float: right;
-    background-color: #530055;
-    color: #F9F9F9;
-    border: 0;
-}
-
-.form-reg h4 {
+#top-nav *{
     display: inline;
+    color: #f9f9f9;
 }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #F9F9F9;
-    color: black;
-    padding: 20%;
-    margin: 20px;
-}
-
-
-#data hr {
-    color: #F9F9F9;
-    grid-column: 1 / 4;
-    width: 80%;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-#data h2 {
-    grid-column: 1 / 4;
-    margin: auto;
-    margin-bottom: 0;
-}
-
-#data{
-    display: grid;
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(3,minmax(auto,300px));
-    grid-template-rows: 80px 30px 1fr;
-}
-
-#contact {
+#top-nav{
     background-color: #830086;
-    padding: 10px 10px 40px 10px;
+    padding: 2.5vh 6vw;
+    margin: auto;
 }
 
-#contact h3 {
+#top-nav nav {
+    float: right;
+    text-decoration: none;
+}
+
+#top-nav nav a{
+    text-decoration: none;
+    padding-right: 3vw;
+}
+
+/* Search Banner */
+
+#search-banner{
+    /* background-color: red; */
+    color: #830086;
+    display: flow-root;
+}
+
+#search-banner img{
+    width: 50%;
+    float: left;
+}
+
+
+/* Grid */
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,300px));
+}
+
+
+.card-odd {
+    border: 12px solid #830086;
+    border-radius: 30px;
     text-align: center;
 }
 
-#contact form {
-    width: min-content;
-    margin: auto;
-    line-height: 30px;
+.card-even {
+    border: 12px solid #830086;
+    border-radius: 30px;
+    background-color: #830086;
+    color: #f9f9f9;
+    text-align: center;
 }
 
-#contact form input, textarea {
-    width: 300px;
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1vh 0;
+    background-color: #830086;
+    color: #f9f9f9;
+    text-align: center;
+    font-size: .9em;
 }
 
-#contact form textarea {
-    resize: none;
-    height: 150px;
-    padding: 4px;
+footer a {
+    color: #f9f9f9;
 }
 
-#contact form input[type="submit"] {
-    width: min-content;
-}
-
-@media screen and (max-width: 600px) {
-    #data hr {
-        grid-column: 1;
-    }
-    
-    #data h2 {
-        grid-column: 1;
+@media screen and (max-width: 600px){
+    #top-nav {
+        text-align: center;
     }
 
-    .card{
-        margin: 20px 40px;
-    }
-
-    #data {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr repeat(auto-fill,250px);
-    }
-
-    .form-reg h4 {
+    #top-nav nav{
+        background-color: #830086;
+        float: none; 
         display: block;
-        font-size: 1.5em;
+        margin-top: 1.5vh;
     }
-  }
+}
