@@ -14,8 +14,8 @@
         <h4>Covid19 Status Report </h4>
         <nav>
             <a href="index.html">Home</a>
-            <a href="symptoms.html">Symptoms</a>
-            <a href="prevention.html">Prevention</a>
+            <a href="symptoms.php">Symptoms</a>
+            <a href="prevention.php">Prevention</a>
         </nav>
     </div>
     <h2 id="title">SYMPTOMS</h2>
