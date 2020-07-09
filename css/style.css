@@ -308,7 +308,7 @@ table *{
 }
 /* PHP Pages */
 
-#page-container p{
+#page-container .long-text{
     width: 80vw;
     margin: auto;
 }

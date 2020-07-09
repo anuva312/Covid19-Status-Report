@@ -21,7 +21,7 @@
     <div id="page-container">
     <h2 id="title">PREVENTION</h2>
     <hr>
-    <p>
+    <p class="long-text">
     <?php
 
      $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
