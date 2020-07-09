@@ -26,22 +26,10 @@
     <hr>
     <div id="daily-changes">
       <aside>
-        <button type="button">Global</button>
-        <button type="button"></button>
+        <button type="button" onclick="global_fun.get_daily_global();">Global</button>
+        <button type="button" id="country_button" onclick="global_fun.get_daily_country();"></button>
       </aside>
-      <table id="daily_data_table">
-        <tr>
-          <th>Date</th>
-          <th>Confirmed Cases</th>
-          <th>Recovered Cases</th>
-          <th>Death</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+      <table id="daily_data_table"></table>
     </div>
   </div>
   <footer>

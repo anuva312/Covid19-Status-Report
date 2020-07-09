@@ -9,7 +9,8 @@
       var country_data = summary["Countries"];
       country_data.forEach(function (each_country){
         if (each_country.Country === country_name){
-          localStorage.setItem("countryName",each_country["Slug"]);
+          localStorage.setItem("countryName",each_country["Country"]);
+          localStorage.setItem("countrySlug",each_country["Slug"]);
           document.querySelector("#country_field_head")
             .innerHTML = ("Country<br>" +country_name);
           document.querySelector("#country_confirmed")
@@ -40,7 +41,7 @@
     function (request) {
       summary = JSON.parse(request.responseText);
       getCountryList();
-      var global_count = summary["Global"]
+      var global_count = summary["Global"];
       document.querySelector("#global_confirmed")
         .innerHTML = ("Total Confirmed: " +global_count["TotalConfirmed"]);
       document.querySelector("#global_deaths")
@@ -53,7 +54,7 @@
         .innerHTML = ("Today's Deaths: " +global_count["NewDeaths"]);
       document.querySelector("#global_new_recovered")
         .innerHTML = ("Today's Recovered: " +global_count["NewRecovered"]);
-      getCountryData("United States of America");
+      getCountryData("United Kingdom");
       document.querySelector("button").addEventListener("click",
       function () {
         var country_name = document.getElementById("country_field").value;
