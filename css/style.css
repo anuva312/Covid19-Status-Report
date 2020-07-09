@@ -306,7 +306,12 @@ table *{
     color: #830086;
     cursor: pointer;
 }
+/* PHP Pages */
 
+#page-container p{
+    width: 80vw;
+    margin: auto;
+}
 
 /* Footer */
 
