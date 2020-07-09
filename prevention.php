@@ -21,6 +21,7 @@
     <div id="page-container">
     <h2 id="title">PREVENTION</h2>
     <hr>
+    <p>
     <?php
 
      $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
@@ -35,6 +36,7 @@
          echo"<br>".$row["preventions"];
       }
     ?>
+    </p>
     </div>
     <footer>
         Designed by Remarkable Pebbles. <br>
