@@ -35,6 +35,13 @@ hr{
     width: 40%;
 }
 
+.no-select, #top-nav h4, footer{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+}
+
 /* Top Navigation */
 
 #top-nav *{
@@ -42,7 +49,7 @@ hr{
 }
 
 #top-nav h4{
-    display: inline;
+    display: inline;   
 }
 
 #top-nav{
@@ -124,7 +131,6 @@ hr{
 /* Auto Complete */
 
 .autocomplete {
-    /*the container must be positioned relative:*/
     position: relative;
     display: inline-block;
   }
@@ -235,6 +241,10 @@ hr{
     display: flex;
     align-content: space-around;
     justify-content: center;
+}
+
+#daily-changes aside *{
+    margin: 0 20px 10px;
 }
 
 #daily-changes table{
