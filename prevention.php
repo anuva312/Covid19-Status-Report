@@ -20,6 +20,7 @@
     </div>
     <h2 id="title">PREVENTION</h2>
     <hr>
+    <div id="page-container">
     <?php
 
      $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
@@ -27,13 +28,14 @@
          echo"succes";
       }else{
          echo"failed connection";
-      }
+      }*/
      $sql ="SELECT * FROM prevention";
      $result=mysqli_query($conn,$sql);
      while($row=mysqli_fetch_array($result)){
          echo"<br>".$row["preventions"];
       }
-    ?>php
+    ?>
+    </div>
     <footer>
         Designed by Remarkable Pebbles. <br>
         For feedback, <a href="contact.html">Click Here</a>

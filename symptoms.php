@@ -20,6 +20,7 @@
     </div>
     <h2 id="title">SYMPTOMS</h2>
     <hr>
+    <div id="page-container">
      <?php
 
        $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
@@ -36,6 +37,7 @@
              }
           
      ?>
+     </div>
     <footer>
         Designed by Remarkable Pebbles. <br>
         For feedback, <a href="contact.html">Click Here</a>
