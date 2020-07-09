@@ -56,7 +56,7 @@ hr{
 #top-nav{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #830086;
     padding: 2.5vh 6vw;
     margin: auto;
@@ -260,6 +260,8 @@ hr{
 
 table{
     margin: auto;
+    width: 100vw;
+    height: inherit;
 }
 
 table,table *{
@@ -268,7 +270,7 @@ table,table *{
 }
 
 table *{
-    padding: 5px
+    padding: 5px;
 }
 
 
@@ -309,7 +311,7 @@ footer {
     height: 8vh;
     padding-top: 1vh;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #830086;
     border-top: 1px solid #f9f9f9;
     color: #f9f9f9;
