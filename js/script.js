@@ -1,12 +1,20 @@
 (function (global){
   document.addEventListener("DOMContentLoaded",
     function (event) {
+        global_fun={};
         $ajaxUtils.sendGetRequest("https://api.covid19api.com/summary", 
             function (request) {
                 var summary = JSON.parse(request.responseText);
                 var country_data = summary["Countries"];
-                // var row_no=1;
+                var date=country_data[0].Date;
                 var table = document.querySelector("#all_countries_table");
+
+                var showLoading = function (selector) {
+                  var html = "<center><img src='img/ajax-loader-bigger.gif'></center>";
+                  var targetElem = document.querySelector(selector);
+                  targetElem.innerHTML = html;
+                };
+
                 if(table){
                     country_data.forEach(function (each_country){
                      // console.log(each_country["Country"])
@@ -22,22 +30,40 @@
 
                 })}else{
                     table=document.querySelector("#daily_data_table");
-                    var country_name=localStorage.getItem("countryName");
-                    var daily_data_url="https://api.covid19api.com/dayone/country/"+country_name;
-                    $ajaxUtils.sendGetRequest(daily_data_url, 
-                    function (request) {
-                        var country_details=JSON.parse(request.responseText);
-                        document.querySelector("#table-title").innerHTML=country_details[0].Country;
-                        country_details.forEach(function (each_day){ 
-                            var new_row=table.insertRow(-1);
-                            new_row.insertCell(0).innerHTML=each_day["Date"];
-                            new_row.insertCell(1).innerHTML=each_day["Confirmed"];
-                            new_row.insertCell(2).innerHTML=each_day["Recovered"];
-                            new_row.insertCell(3).innerHTML=each_day["Deaths"];
+                    showLoading("#daily_data_table");
+                    global_fun.get_daily_global=function(){
+                        table.innerHTML="<tr><th>Date</th><th>Confirmed Cases</th><th>Recovered Cases</th><th>Death</th></tr>";
+                        document.querySelector("#country_button").innerHTML=localStorage.getItem("countryName");
+                        var global_count = summary["Global"];
+                        var new_row=table.insertRow(-1);
+                        new_row.insertCell(0).innerHTML=date;
+                        new_row.insertCell(1).innerHTML=global_count["NewConfirmed"];
+                        new_row.insertCell(2).innerHTML=global_count["NewRecovered"];
+                        new_row.insertCell(3).innerHTML=global_count["NewDeaths"];
+
+                    };
+                    global_fun.get_daily_country=function(){
+                        showLoading("#daily_data_table");
+                        // table=document.querySelector("#daily_data_table");
+                        var country_name=localStorage.getItem("countrySlug");
+                        var daily_data_url="https://api.covid19api.com/dayone/country/"+country_name;
+                        $ajaxUtils.sendGetRequest(daily_data_url, 
+                        function (request) {
+                            var country_details=JSON.parse(request.responseText);
+                            table.innerHTML="<tr><th>Date</th><th>Confirmed Cases</th><th>Recovered Cases</th><th>Death</th></tr>";
+                            country_details.forEach(function (each_day){ 
+                                var new_row=table.insertRow(-1);
+                                new_row.insertCell(0).innerHTML=each_day["Date"];
+                                new_row.insertCell(1).innerHTML=each_day["Confirmed"];
+                                new_row.insertCell(2).innerHTML=each_day["Recovered"];
+                                new_row.insertCell(3).innerHTML=each_day["Deaths"];
+                            });
                         });
-                    });
+                    };
+                    global_fun.get_daily_global();
                 };
                
             });
+        global.global_fun=global_fun;
     })
 }(window));
