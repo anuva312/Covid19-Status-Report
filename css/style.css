@@ -287,6 +287,10 @@ table *{
     padding: 10px;
 }
 
+#suggestion-form form textarea:focus{
+    border-color: dodgerblue;
+}
+
 #suggestion-form form :last-child{
     padding: 10px 20px;
     width: max-content;
