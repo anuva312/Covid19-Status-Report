@@ -21,6 +21,7 @@
         <div id="suggestion-form">
             <h3 id="title">Suggestions</h3>
             <hr>
+               
             <form>
                 <label for="name">Name :</label>
                 <input type="text" name="name">
@@ -32,6 +33,20 @@
             </form>
         </div>
     </div>
+            <?php
+
+             $conn = mysqli_connect("localhost","root","","corona");
+             if(isset($_POST['submit'])){
+             $name=$_POST['name'];
+             $email=$_POST['email'];
+             $message=$_POST['message'];
+             }
+             $sql = "INSERT INTO form (name,email,message) values ('$name','$email','$message')";
+             $result = mysqli_query($conn,$sql);
+             if( $result)
+                { echo"Message sent";
+                 }
+            ?>
     <footer>
         Designed by Remarkable Pebbles. <br>
         <!-- <p>For feedback, <a href="contact.html">Click Here</a></p> -->
