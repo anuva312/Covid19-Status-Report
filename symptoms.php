@@ -22,7 +22,7 @@
     <hr>
      <?php
 
-       $conn = mysqli_connect("localhost","root","","corona");
+       $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
        /*if($conn){
            echo"succes";
         }else { 
