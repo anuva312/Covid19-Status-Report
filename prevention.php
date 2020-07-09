@@ -18,9 +18,9 @@
             <a href="prevention.php">Prevention</a>
         </nav>
     </div>
+    <div id="page-container">
     <h2 id="title">PREVENTION</h2>
     <hr>
-    <div id="page-container">
     <?php
 
      $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
