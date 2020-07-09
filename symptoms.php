@@ -34,7 +34,7 @@
        while($row=mysqli_fetch_array($result)){
            echo"<br>".$row["symptom"];
              }
-          }
+          
      ?>
     <footer>
         Designed by Remarkable Pebbles. <br>
