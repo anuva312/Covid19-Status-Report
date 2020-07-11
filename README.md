@@ -41,3 +41,13 @@ There are 5 pages is this website :
     It contains some information about symptoms associated with Covid-19.
 5. Prevention - prevention.html
     It contains some information about preventive measures that can be taken against Covid-19.
+## References
+### CSS
+1. [MDN - CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+2. [MDN - Basic Concepts of FlexBox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+3. [W3Schools - How to Create Autocomplete on an Input Field](https://www.w3schools.com/howto/howto_js_autocomplete.asp)
+4. [W3Schools - How to Create a Responsive Top Navigation](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp)
+### Other
+1. [DigitalOcean - How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
+2. [Webhosting Geeks - How to Import and Export MySQL Database Command line in Linux](https://webhostinggeeks.com/howto/import-and-export-mysql-database-command-line-in-linux/)
+3. [Tech Queries - Modus Operandi to Import and Export SQL Server Database](https://www.sqlserverlogexplorer.com/import-and-export-database/)
