@@ -334,6 +334,12 @@ footer a {
 
 @media screen and (max-width: 900px){
     
+    /* Page */
+
+    #page-container{
+        overflow: auto;
+    }
+
     /* Main */
 
     #main-container{
