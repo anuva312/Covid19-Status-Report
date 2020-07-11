@@ -1,7 +1,5 @@
-(function (global){
   document.addEventListener("DOMContentLoaded",
     function (event) {
-        global_fun={};
         $ajaxUtils.sendGetRequest("https://api.covid19api.com/summary", 
             function (request) {
                 var summary = JSON.parse(request.responseText);
@@ -17,7 +15,6 @@
 
                 if(table){
                     country_data.forEach(function (each_country){
-                     // console.log(each_country["Country"])
                      var new_row=table.insertRow(-1);
                      new_row.insertCell(0).innerHTML=each_country["Country"];
                      new_row.insertCell(1).innerHTML=each_country["NewConfirmed"];
@@ -30,21 +27,9 @@
 
                 })}else{
                     table=document.querySelector("#daily_data_table");
-                    showLoading("#daily_data_table");
-                    global_fun.get_daily_global=function(){
-                        table.innerHTML="<tr><th>Date</th><th>Confirmed Cases</th><th>Recovered Cases</th><th>Death</th></tr>";
-                        document.querySelector("#country_button").innerHTML=localStorage.getItem("countryName");
-                        var global_count = summary["Global"];
-                        var new_row=table.insertRow(-1);
-                        new_row.insertCell(0).innerHTML=date;
-                        new_row.insertCell(1).innerHTML=global_count["NewConfirmed"];
-                        new_row.insertCell(2).innerHTML=global_count["NewRecovered"];
-                        new_row.insertCell(3).innerHTML=global_count["NewDeaths"];
-
-                    };
-                    global_fun.get_daily_country=function(){
+                    get_daily_country=function(){
                         showLoading("#daily_data_table");
-                        // table=document.querySelector("#daily_data_table");
+                        document.querySelector("#table-heading").innerHTML=localStorage.getItem("countryName");
                         var country_name=localStorage.getItem("countrySlug");
                         var daily_data_url="https://api.covid19api.com/dayone/country/"+country_name;
                         $ajaxUtils.sendGetRequest(daily_data_url, 
@@ -60,10 +45,8 @@
                             });
                         });
                     };
-                    global_fun.get_daily_global();
+                    get_daily_country();
                 };
                
             });
-        global.global_fun=global_fun;
     })
-}(window));
