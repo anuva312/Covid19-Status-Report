@@ -11,6 +11,7 @@ Or
 git clone git@gitlab.com:remarkable-pebbles/covid19-status-report.git
 ```
 Or you download the zip file as well.
+
 2. Create a database named cov_data in your sql.
 In SQL,
 ```
