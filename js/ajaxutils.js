@@ -24,7 +24,6 @@ function getRequestObject() {
 ajaxUtils.sendGetRequest = 
   function(requestUrl, responseHandler) {
     var request = getRequestObject();
-    // console.log(request)
     request.onreadystatechange = 
       function() { 
         handleResponse(request, responseHandler); 
@@ -39,8 +38,6 @@ ajaxUtils.sendGetRequest =
 // and not an error
 function handleResponse(request,
                         responseHandler) {
-  // console.log("Inside Function")
-  // console.log(request.status)
   if ((request.readyState == 4) &&
      (request.status == 200)) {
     responseHandler(request);

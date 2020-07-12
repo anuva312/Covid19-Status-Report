@@ -1,9 +1,10 @@
-// Event handling
+// Event handling on Submiting a country name
 (function (global){
   document.addEventListener("DOMContentLoaded",
   function (event) {
     var summary;
     var country_list=[];
+    
     //To get data pertaining to a specific country 
     function getCountryData(country_name){
       var country_data = summary["Countries"];
@@ -29,7 +30,7 @@
       })
     };
 
-    //getting country list to display autocomplete
+    //getting country list to display in autocomplete
     function getCountryList(){
       summary['Countries'].forEach(function (each_country){
         country_list.push(each_country.Country);
