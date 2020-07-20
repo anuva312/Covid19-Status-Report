@@ -29,22 +29,22 @@
                 <input type="email" name="email">
                 <label for="message">Message :</label>
                 <textarea name="message"></textarea>
-                <input type="submit" value="Send">
+                <input type="submit" name="submit" value="Send">
             </form>
         </div>
     </div>
             <?php
 
-             $conn = mysqli_connect("localhost","root","","corona");
-             if(isset($_POST['submit'])){
-             $name=$_POST['name'];
-             $email=$_POST['email'];
-             $message=$_POST['message'];
+             $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
+             if(isset($_POST["submit"])){
+             $name=$_POST["name"];
+             $email=$_POST["email"];
+             $message=$_POST["message"];
              }
              $sql = "INSERT INTO form (name,email,message) values ('$name','$email','$message')";
              $result = mysqli_query($conn,$sql);
              if( $result)
-                { echo"Message sent";
+                { echo "Message sent";
                  }
             ?>
     <footer>
