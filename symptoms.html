@@ -14,34 +14,42 @@
         <h4>Covid19 Status Report </h4>
         <nav>
             <a href="index.html">Home</a>
-            <a href="symptoms.php">Symptoms</a>
-            <a href="prevention.php">Prevention</a>
+            <a href="symptoms.html">Symptoms</a>
+            <a href="prevention.html">Prevention</a>
         </nav>
     </div>
     <div id="page-container">
         <h2 id="title">SYMPTOMS</h2>
         <hr>
-        <p class="long-text">
-            <!-- <?php
+        <div class="long-text">
+            Most common symptoms:
+            <ul>
+                <li>fever</li>
+                <li>dry cough</li>
+                <li>tiredness</li>
+            </ul>
 
-       $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
-       /*if($conn){
-           echo"succes";
-        }else { 
-          echo"failed connection";
-
-          }*/
-       $sql ="SELECT * FROM symptoms";
-       $result=mysqli_query($conn,$sql);
-       while($row=mysqli_fetch_array($result)){
-           echo"<br>".$row["symptom"];
-             }
-          
-     ?> -->
-        </p>
+            Less common symptoms:
+            <ul>
+                <li>aches and pains</li>
+                <li>throat</li>
+                <li>diarrhoea</li>
+                <li>headache</li>
+                <li>loss of taste or smell a rash on skin, or discolouration of fingers or toes</li>
+            </ul>
+            Serious symptoms:
+            <ul>
+                <li>difficulty in breathing or shortness of breath</li>
+                <li>chest pain or pressure</li>
+                <li>loss of speech or movement</li>
+            </ul>
+            Seek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility. People with mild symptoms who are otherwise healthy should manage their symptoms at home. On average it takes 5-6 days from when
+            someone is infected with the virus for symptoms to show, however it can take up to 14 days.
+        </div>
     </div>
     <footer>
-        Designed by Remarkable Pebbles. <br> For feedback, <a href="contact.php">Click Here</a>
+        Designed by Remarkable Pebbles.
+        <!-- <br> For feedback, <a href="contact.html">Click Here</a> -->
     </footer>
 </body>
 

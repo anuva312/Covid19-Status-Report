@@ -14,32 +14,35 @@
         <h4>Covid19 Status Report </h4>
         <nav>
             <a href="index.html">Home</a>
-            <a href="symptoms.php">Symptoms</a>
-            <a href="prevention.php">Prevention</a>
+            <a href="symptoms.html">Symptoms</a>
+            <a href="prevention.html">Prevention</a>
         </nav>
     </div>
     <div id="page-container">
         <h2 id="title">PREVENTION</h2>
         <hr>
-        <p class="long-text">
-            <!-- <?php
+        <div class="long-text">
+            Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local health authority.<br><br> To prevent the spread of COVID-19:
+            <ul>
+                <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li>
+                <li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+                <li>Wear a mask when physical distancing is not possible.</li>
+                <li>Don't touch your eyes, nose or mouth.</li>
+                <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneez</li>
+                <li>Stay home if you feel unwell.</li>
+                <li>If you have a fever, cough and difficulty breathing, seek medical attention.</li>
+            </ul>
 
-     $conn = mysqli_connect("localhost","webhost","webdev","cov_data");
-     /*if($conn){
-         echo"succes";
-      }else{
-         echo"failed connection";
-      }*/
-     $sql ="SELECT * FROM prevention";
-     $result=mysqli_query($conn,$sql);
-     while($row=mysqli_fetch_array($result)){
-         echo"<br>".$row["preventions"];
-      }
-    ?> -->
-        </p>
+            Calling in advance allows your healthcare provider to quickly direct you to the right health facility. This protects you, and prevents the spread of viruses and other infections.
+
+            <h4>Masks</h4>
+
+            Masks can help prevent the spread of the virus from the person wearing the mask to others. Masks alone do not protect against COVID-19, and should be combined with physical distancing and hand hygiene. Follow the advice provided by your local health authority.
+        </div>
     </div>
     <footer>
-        Designed by Remarkable Pebbles. <br> For feedback, <a href="contact.php">Click Here</a>
+        Designed by Remarkable Pebbles.
+        <!-- <br> For feedback, <a href="contact.html">Click Here</a> -->
     </footer>
 </body>
 
