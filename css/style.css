@@ -1,9 +1,9 @@
-@font-face{
+@font-face {
     font-family: Montserrat;
     src: url(fonts/Montserrat-Regular.ttf) format('truetype');
 }
 
-@font-face{
+@font-face {
     font-family: Montserrat;
     src: url(fonts/Montserrat-SemiBold.ttf) format('truetype');
     font-weight: bold;
@@ -12,6 +12,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     background-color: #f9f9f9;
     font-family: Montserrat, sans-serif;
@@ -25,35 +26,37 @@ body {
     padding-bottom: 8vh;
 }
 
-#title{
+#title {
     color: #830086;
     text-align: center;
-    
 }
 
-hr{
+hr {
     color: #830086;
     width: 40%;
 }
 
-.no-select, #top-nav h4, footer{
+.no-select,
+#top-nav h4,
+footer {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    -ms-user-select: none; 
+    -ms-user-select: none;
 }
+
 
 /* Top Navigation */
 
-#top-nav *{
+#top-nav * {
     color: #f9f9f9;
 }
 
-#top-nav h4{
-    display: inline;   
+#top-nav h4 {
+    display: inline;
 }
 
-#top-nav{
+#top-nav {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -68,20 +71,21 @@ hr{
     text-decoration: none;
 }
 
-#top-nav nav a{
+#top-nav nav a {
     text-decoration: none;
     padding: 1vh 1.5vw;
 }
 
-#top-nav nav a:hover{
+#top-nav nav a:hover {
     background-color: #f9f9f9;
     color: #830086;
     border-radius: 20px;
 }
 
+
 /* Search Banner */
 
-#search-banner{
+#search-banner {
     color: #830086;
     display: flex;
     max-height: 35vh;
@@ -89,20 +93,19 @@ hr{
     margin: auto;
 }
 
-
-#search-banner img{
+#search-banner img {
     padding: 2vh;
     object-fit: contain;
     max-width: 50%;
 }
 
-#search-banner #text{
+#search-banner #text {
     flex-grow: 1;
     text-align: left;
     align-self: center;
 }
 
-#search-banner #text h4{
+#search-banner #text h4 {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
@@ -113,18 +116,17 @@ hr{
     justify-content: left;
 }
 
-#search-banner #text form input{
+#search-banner #text form input {
     border-radius: 20px 0 0 20px;
     border: 1px solid #830086;
     padding: 5px 15px;
-    
 }
 
-#search-banner #text form input:focus{
-    border: 2px solid #4e71b3;  
+#search-banner #text form input:focus {
+    border: 2px solid #4e71b3;
 }
 
-#search-banner form button{
+#search-banner form button {
     border-radius: 0 20px 20px 0;
     background-color: #830086;
     border: 1px solid #830086;
@@ -133,12 +135,13 @@ hr{
     cursor: pointer;
 }
 
+
 /* Auto Complete */
 
 .autocomplete {
     position: relative;
     display: inline-block;
-  }
+}
 
 .autocomplete-items {
     position: absolute;
@@ -146,20 +149,24 @@ hr{
     border: 1px solid #d4d4d4;
     max-height: 300px;
     overflow: scroll;
-  }
-  .autocomplete-items div {
+}
+
+.autocomplete-items div {
     padding: 10px;
     cursor: pointer;
     background-color: #fff;
     border-bottom: 1px solid #d4d4d4;
-  }
-  .autocomplete-items div:hover {
+}
+
+.autocomplete-items div:hover {
     background-color: #e9e9e9;
-  }
-  .autocomplete-active {
+}
+
+.autocomplete-active {
     background-color: DodgerBlue !important;
     color: #ffffff;
-  }
+}
+
 
 /* Main */
 
@@ -169,6 +176,7 @@ hr{
     margin: auto;
 }
 
+
 /* Common Aside Code */
 
 #main-container aside a {
@@ -177,8 +185,7 @@ hr{
 }
 
 #main-container aside a,
-#daily-changes aside button 
-{
+#daily-changes aside button {
     background-color: #f9f9f9;
     max-width: 150px;
     text-decoration: none;
@@ -189,36 +196,37 @@ hr{
 }
 
 #main-container aside a:hover,
-#daily-changes aside button:hover{
+#daily-changes aside button:hover {
     color: #f9f9f9;
     background-color: #830086;
 }
 
-#main-container aside{
+#main-container aside {
     flex-grow: 2;
     margin: auto 20px;
 }
 
-#main-container hr{
-    margin:10px 10vw 15px  0;
+#main-container hr {
+    margin: 10px 10vw 15px 0;
     width: initial;
     border: 2px solid #830086;
     justify-self: center;
 }
 
-#main-container #right{
+#main-container #right {
     flex-grow: 3;
     text-align: center;
     color: #830086;
 }
 
-#main-container #right #cards{
+#main-container #right #cards {
     display: flex;
     justify-content: space-around;
     align-content: center;
 }
 
-.card-odd, .card-even{
+.card-odd,
+.card-even {
     flex-grow: 1;
     min-width: 150px;
     margin: 3vw;
@@ -231,67 +239,70 @@ hr{
 
 .card-even {
     background-color: #830086;
-    color: #f9f9f9;  
+    color: #f9f9f9;
 }
+
 
 /* Daily Changes */
 
-#daily-changes{
+#daily-changes {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
-#daily-changes aside{
+#daily-changes aside {
     display: flex;
     align-content: space-around;
     justify-content: center;
 }
 
-#daily-changes aside *{
+#daily-changes aside * {
     margin: 0 20px 10px;
 }
 
-#daily-changes table{
+#daily-changes table {
     align-self: center;
 }
 
+
 /* Table */
 
-table{
+table {
     margin: auto;
     width: 100vw;
     height: inherit;
 }
 
-table,table *{
+table,
+table * {
     border: 1px solid #830086;
     border-collapse: collapse;
 }
 
-table *{
+table * {
     padding: 5px;
 }
 
 
 /* Suggestion Form */
 
-#suggestion-form form{
+#suggestion-form form {
     display: flex;
     flex-direction: column;
     width: 40%;
     margin: auto;
 }
 
-#suggestion-form form *{
+#suggestion-form form * {
     padding: 10px;
 }
 
-#suggestion-form form textarea:focus{
+#suggestion-form form textarea:focus {
     border-color: dodgerblue;
 }
 
-#suggestion-form form :last-child{
+#suggestion-form form :last-child {
     padding: 10px 20px;
     width: max-content;
     margin: 15px auto;
@@ -301,17 +312,20 @@ table *{
     color: #f9f9f9;
 }
 
-#suggestion-form form :last-child:hover{
+#suggestion-form form :last-child:hover {
     background-color: #f9f9f9;
     color: #830086;
     cursor: pointer;
 }
+
+
 /* PHP Pages */
 
-#page-container .long-text{
+#page-container .long-text {
     width: 80vw;
     margin: auto;
 }
+
 
 /* Footer */
 
@@ -332,66 +346,51 @@ footer a {
     color: #f9f9f9;
 }
 
-@media screen and (max-width: 900px){
-    
+@media screen and (max-width: 900px) {
     /* Page */
-
-    #page-container{
+    #page-container {
         overflow: auto;
     }
-
     /* Main */
-
-    #main-container{
+    #main-container {
         flex-direction: column;
         align-content: center;
     }
-
-    #main-container aside{
+    #main-container aside {
         display: flex;
         justify-content: center;
     }
-
-    #main-container aside a{
+    #main-container aside a {
         margin: 20px 5px auto;
     }
-
-    #main-container hr{
+    #main-container hr {
         margin: 20px 20px 0;
         border-width: 1px;
     }
-
-    #main-container #right #cards{
+    #main-container #right #cards {
         flex-wrap: wrap;
     }
-
 }
 
-@media screen and (max-width: 600px){
-    
-    #page-container{
+@media screen and (max-width: 600px) {
+    #page-container {
         margin-top: 15vh;
     }
-
     /* Nav */
-    
     #top-nav {
         text-align: center;
     }
-
-    #top-nav nav{
+    #top-nav nav {
         background-color: #830086;
-        float: none; 
+        float: none;
         display: block;
         margin-top: 1.5vh;
     }
-
     /* Search Banner */
-    #search-banner img{
+    #search-banner img {
         display: none;
     }
-
-    #search-banner #text{
+    #search-banner #text {
         margin: 0 auto;
         background-image: url(../img/world-map.png);
         background-repeat: no-repeat;
@@ -400,10 +399,8 @@ footer a {
         text-shadow: -2px -2px 1px #f9f9f9;
         min-height: 20vh;
         width: min-content;
-        
     }
-
-    #search-banner{
+    #search-banner {
         display: initial;
     }
 }
