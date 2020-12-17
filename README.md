@@ -1,23 +1,20 @@
 # Covid19 Status Report
 This project was created as part of the Web Technologies Course under B.Tech certication at Vidya Academy of Science and Technology. It is an attempt to reformat openly available covid-19 data and make it accessible to everyone with an internet connection.
 
-[Click here](https://remarkable-pebbles.gitlab.io/covid19-status-report/) to see the website in action!
+[Click here](https://https://anuva312.github.io/Covid19-Status-Report/) to see the website in action!
 
 ## Installation
 ### Linux
-1. Clone the repository into /var/www/ or /var/www/html using
+1. Clone the repository into a folder of your choice using
 ```
-git clone https://gitlab.com/remarkable-pebbles/covid19-status-report.git
+git clone https://github.com/anuva312/Covid19-Status-Report.git
 ```
 Or
 ```
-git clone git@gitlab.com:remarkable-pebbles/covid19-status-report.git
+git clone git@github.com:anuva312/Covid19-Status-Report.git
 ```
-Or you download the zip file as well.
+Or you can download the zip file as well.
 
-2. Now, in your browser type in localhost/covid19-status-report/.
-It sould open up the index.html.
-Feel free to copy the files on coid19-status-report to the parent directory. Then index.html should show up when localhost is typed.
 ## Pages
 There are 5 pages is this website :
 1. Home - index.html
@@ -37,7 +34,3 @@ There are 5 pages is this website :
 2. [MDN - Basic Concepts of FlexBox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 3. [W3Schools - How to Create Autocomplete on an Input Field](https://www.w3schools.com/howto/howto_js_autocomplete.asp)
 4. [W3Schools - How to Create a Responsive Top Navigation](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp)
-### Other
-1. [DigitalOcean - How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
-2. [Webhosting Geeks - How to Import and Export MySQL Database Command line in Linux](https://webhostinggeeks.com/howto/import-and-export-mysql-database-command-line-in-linux/)
-3. [Tech Queries - Modus Operandi to Import and Export SQL Server Database](https://www.sqlserverlogexplorer.com/import-and-export-database/)# Covid19-Status-Report
