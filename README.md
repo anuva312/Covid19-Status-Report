@@ -40,4 +40,4 @@ There are 5 pages is this website :
 ### Other
 1. [DigitalOcean - How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
 2. [Webhosting Geeks - How to Import and Export MySQL Database Command line in Linux](https://webhostinggeeks.com/howto/import-and-export-mysql-database-command-line-in-linux/)
-3. [Tech Queries - Modus Operandi to Import and Export SQL Server Database](https://www.sqlserverlogexplorer.com/import-and-export-database/)
+3. [Tech Queries - Modus Operandi to Import and Export SQL Server Database](https://www.sqlserverlogexplorer.com/import-and-export-database/)# Covid19-Status-Report
