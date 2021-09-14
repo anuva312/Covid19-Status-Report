@@ -1,5 +1,5 @@
 # Covid19 Status Report
-This project was created as part of the Web Technologies Course under B.Tech certication at Vidya Academy of Science and Technology. It is an attempt to reformat openly available covid-19 data and make it accessible to everyone with an internet connection.
+This project was created as part of the Web Technologies Course under B.Tech certification at Vidya Academy of Science and Technology. It is an attempt to reformat openly available covid-19 data and make it accessible to everyone with an internet connection.
 
 [Click here](https://anuva312.github.io/Covid19-Status-Report/) to see the website in action!
 
